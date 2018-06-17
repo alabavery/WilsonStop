@@ -9,7 +9,8 @@ export const ArrivalSection = props => {
   return (
     <div className="arrivalsection">
       <h3>Wilson</h3>
-      <h1>{tiles}</h1>
+      {tiles}
+      <Tile line="Purple Line" departure="9:30am"/>
     </div>
   );
 };

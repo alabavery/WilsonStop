@@ -8,6 +8,7 @@ export const refineRoutes = rawRoutes => {
     throw new Error("Hey guess what ... tried to refine 'null' routes");
   }
   return rawRoutes.reduce((acc, route, index) => {
+    if (index > 3) { return acc; }
     const partWeCareAbout = route.legs[0].steps[1].transit;
     const lineName = partWeCareAbout.line.name;
     if (lineName === 'Red Line' || lineName === 'Purple Line') {
